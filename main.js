@@ -4,7 +4,7 @@ function customTask(message) {
           <p class="grow">${message}</p>
           <div class="gap-1">
              <button class=" hover:bg-cyan-500 hover:text-white rounded-full w-10 h-10 text-cyan-600 border bg-white transition-colors "><i class="fa-solid fa-pen"></i></button>
-           <button class=" hover:bg-cyan-500 hover:text-white rounded-full w-10 h-10 text-cyan-600 border bg-white transition-colors "><i class="fa-solid fa-trash"></i></button>
+           <button class=" hover:bg-cyan-500 hover:text-white rounded-full w-10 h-10 text-cyan-600 border bg-white transition-colors " onclick="deleteTask(this)"><i class="fa-solid fa-trash"></i></button>
           </div>
         </div>`;
 }
@@ -18,4 +18,9 @@ function addTask() {
     taskList.innerHTML += customTask(input.value);
     input.value = "";
   }
+}
+
+function deleteTask(target){
+     target.remove()
+
 }
