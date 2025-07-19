@@ -10,8 +10,12 @@ function customTask(message) {
 }
 
 function addTask() {
-  const input = document.querySelector('input');
-  const taskList = document.querySelector(".tasklist");
-  taskList.innerHTML += customTask(input.value);
-  input.value = '';
+  const input = document.querySelector("input");
+  if (input.value == "") {
+    alert("Please enter a task");
+  } else {
+    const taskList = document.querySelector(".tasklist");
+    taskList.innerHTML += customTask(input.value);
+    input.value = "";
+  }
 }
