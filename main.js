@@ -12,5 +12,6 @@ function customTask(message) {
 function addTask() {
   const input = document.querySelector('input');
   const taskList = document.querySelector(".tasklist");
-  taskList.innerHTML += customTask(input);
+  taskList.innerHTML += customTask(input.value);
+  input.value = '';
 }
