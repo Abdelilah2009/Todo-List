@@ -3,7 +3,7 @@ function customTask(message) {
           <button class="bg-slate-100 w-10 h-10 rounded-full"> <i class="fa-solid fa-check text-xl"></i></button>
           <p class="grow">${message}</p>
           <div class="gap-1">
-             <button class=" hover:bg-cyan-500 hover:text-white rounded-full w-10 h-10 text-cyan-600 border bg-white transition-colors "><i class="fa-solid fa-pen"></i></button>
+             <button onclick="updatTask(this)" class=" hover:bg-cyan-500 hover:text-white rounded-full w-10 h-10 text-cyan-600 border bg-white transition-colors "><i class="fa-solid fa-pen"></i></button>
            <button class=" hover:bg-cyan-500 hover:text-white rounded-full w-10 h-10 text-cyan-600 border bg-white transition-colors " onclick="deleteTask(this)"><i class="fa-solid fa-trash"></i></button>
           </div>
         </div>`;
@@ -22,4 +22,8 @@ function addTask() {
 
 function deleteTask(target) {
   target.parentElement.parentElement.remove();
+}
+
+function updatTask(target) {
+    alert("Update functionality is not implemented yet.");
 }
